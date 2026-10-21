@@ -6,4 +6,6 @@ function getDiscount(user, amount) {
   if (amount >= TIER_MID) return amount * 0.10;
   return amount * 0.05;
 }
-function brokenSyntax( {
+function isDiscountTierHigh(amount) {
+  return amount >= TIER_HIGH;
+}
