@@ -1,0 +1,9 @@
+name: CI
+on: [pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Проверка синтаксиса JS-файлов
+        run: for f in *.js; do node --check "$f"; done
